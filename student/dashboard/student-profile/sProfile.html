@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="./stuprofile.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+   
+
+<div class="container">
+    <h2>First Name :</h2> 
+<input type="text" id="firstname" name="firstname" value="" readonly> 
+<h2>Last Name :</h2>
+<input type="text" id="lastname" name="lastname" value="" readonly>
+<h2>Email :</h2>
+<input type="text" id="email" name="email" value="" readonly>
+<h2>DOB :</h2>
+<input type="date" id="date" name="date" required>
+<h2>Department :</h2>
+<input type="text" id="dept" name="dept" placeholder="Enter your Department" required>
+<div class="right">
+<h2>Phone Number :</h2>
+<input type="tel" name="Phone_num" id="Phone_num" value="+91">
+</div> 
+</div>
+<div class="other-data">
+    <h2>Gender :</h2>
+<input type="radio" name="gender" id="gender" value="male" >Male
+<input type="radio" name="gender" id="gender" value="female" >Female
+</div>
+
+
+<div class="image">
+    <nav>MY PROFILE</nav>
+    <input type="file" name="Image" id="Image" accept="image/*" >
+    <p style=" position: absolute; bottom: 20%; left: 20px;">JPG or PNG no longer than 5 MB</p>
+</div>
+
+<button type="submit" id="btn">Update</button>
+   
+</body>
+</html>

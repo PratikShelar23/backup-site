@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+    <link rel="stylesheet" href="./markatt.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+        <div class="sub">
+            <a href="../stuDash.html">
+                <i class="ri-arrow-left-double-line"> 
+                </i>
+            </a>
+            <h3 id="selsub">Select Subject :</h3>
+            <select name="branch" id="branch">
+                <optgroup label="ENTC-BE">
+                    <option value=""></option>
+                    <option value="FOC">FOC</option>
+                    <option value="MOC">MOC</option>
+                    <option value="DM">DM</option>
+                    <option value="IE">IE</option>
+                    <option value="DBM">DBM</option>
+                </optgroup>
+            </select>
+        </div>
+        <section id="cardatt">
+            <video id="webcam" autoplay playsinline></video> <!-- Video element to display webcam feed -->
+        </section>
+        <button id="btn">Submit</button>
+        
+        <script>
+            // Fetch webcam feed and display it in the video element
+            async function getWebcamFeed() {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                const videoElement = document.getElementById('webcam');
+                videoElement.srcObject = stream;
+            }
+        
+            // Call getWebcamFeed function when the page loads
+            window.onload = function() {
+                getWebcamFeed();
+            };
+        
+             // Stop the webcam stream when the submit button is clicked
+            document.getElementById('btn').addEventListener('click', function() {
+                const videoElement = document.getElementById('webcam');
+                if (videoElement.srcObject) {
+                    const tracks = videoElement.srcObject.getTracks();
+                    tracks.forEach(track => track.stop());
+                    videoElement.srcObject = null;
+                }
+            }); 
+        
+            // Ask for permission again when the page is reloaded
+             window.onbeforeunload = function() {
+                const videoElement = document.getElementById('webcam');
+                if (videoElement.srcObject) {
+                    const tracks = videoElement.srcObject.getTracks();
+                    tracks.forEach(track => track.stop());
+                    videoElement.srcObject = null;
+                }
+            }; 
+        </script>
+</body>
+</html>
