@@ -111,3 +111,12 @@
   position: absolute;
   margin-top: 20px;
   }
+
+  @media screen and (max-width:800px) {
+   body{
+    background-image: url("https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0");
+    background-size: cover;
+    background-position: center;
+  }
+  }
+  

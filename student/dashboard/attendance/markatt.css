@@ -13,8 +13,8 @@ background-size: cover;
 background-position: center;
 }
 
-.sub{
 
+.sub{
     display: flex;
     width: 50vh;
     height: 10%;
