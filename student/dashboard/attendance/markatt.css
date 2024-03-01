@@ -3,45 +3,44 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-background-image: url('https://images.unsplash.com/photo-1508615070457-7baeba4003ab?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-background-size: cover;
-background-position: center;
+    height: 100vh;
 }
 
-
-.sub{
-    display: flex;
-    width: 50vh;
-    height: 10%;
+.attcont{
     position: absolute;
-    top: 20%;
+    height: 50%;
+    width: 100%;
+}
+.sub{
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 40%;
+   
+}
+
+#cardatt{
+    height: 60%;
+    width: 40%;
+    margin-left: 30%;
+    border: 2px solid black;
+    border-radius: 20px;
 }
 
 #selsub{
-    width: 40%;
-    margin-top: 10px;
+    width: 15%;
 }
-
 #branch{
-    width: 60%;
+    width: 20%;
     height: 40px;
     font-weight: 600;
     border-radius: 8px;
 }
 
-#cardatt{
-    background-color:bisque;
-    height: 30%;
-    width: 50%;
-    border-radius: 20px;
-    border-style: none;
-    text-align: center;
-}
+
 
 #allow{position: absolute;
     font-size: 1.2rem;
@@ -53,7 +52,8 @@ background-position: center;
 
 #btn{
     position: absolute;
-    margin-top: 30%;
+    margin-left: 45%;
+    margin-top: 5%;
     padding: 15px 40px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -74,4 +74,18 @@ background-position: center;
         position: absolute;
         margin-top: 13px;
         right: 105%;
+        }
+
+        @media screen and (max-width:800px) {
+            
+            #selsub{
+                width: 50%;
+            }
+            #branch{
+                width: 30%;
+            }
+        #btn{
+            right: 33%;
+        }
+            
         }
